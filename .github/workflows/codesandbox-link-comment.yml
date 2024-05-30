@@ -5,7 +5,7 @@ on:
     types: [opened]
   # https://github.com/Inna-Shehovtsova/JSBasic-Practice
   pull_request_target:
-    types: [opened]
+    types: [push, pull_request, open]
 
 jobs:
   codesandbox-comment:
