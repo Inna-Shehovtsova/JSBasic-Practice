@@ -1,0 +1,23 @@
+name: Add codesandbox link
+
+on:
+  pull_request:
+    types: [opened]
+  # https://github.com/Inna-Shehovtsova/JSBasic-Practice
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  codesandbox-comment:
+    permissions: write-all
+    name: Add codesandbox link comment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Inna-Shehovtsova/JSBasic-Practice
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          message: |
+            You can check this code at CodeSandbox with the link
+            name: Add codesandbox link
+            https://githubbox.com/${{ github.repository }}/tree/${{ github.head_ref }} 
