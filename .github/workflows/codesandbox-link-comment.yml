@@ -1,11 +1,6 @@
 name: Add codesandbox link
 
-on:
-  pull_request:
-    types: [opened]
-  # https://github.com/Inna-Shehovtsova/JSBasic-Practice
-  pull_request_target:
-    types: [push, pull_request, open]
+on: [push, pull_request]
 
 jobs:
   codesandbox-comment:
