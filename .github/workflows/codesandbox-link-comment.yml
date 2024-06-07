@@ -1,4 +1,4 @@
-name: Add codesandbox link
+name: Add codesandbox link Inna Test
 
 on:
   pull_request:
